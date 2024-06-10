@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/telapet.css">
+    <title>Cadastre seus Pets</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastre seus Pets</h1>
+        <p id="welcomeMessage"></p>
+        <form id="petForm">
+            <label for="quantidade">Quantidade de Pets:</label>
+            <input type="number" id="quantidade" name="quantidade" min="1" required>            
+            <div id="pets"></div>
+            <input type="button" value="Cadastrar" id="saveButton">
+        </form>
+    </div>
+
+    <script src="../js/telapet.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verifica se há um usuário logado e exibe a mensagem de boas-vindas
+            const userLogado = JSON.parse(localStorage.getItem("userLogado"));
+            if (userLogado) {
+                document.getElementById("welcomeMessage").innerText = `Bem-vindo, ${userLogado.nome}!`;
+            } else {
+                // Caso contrário, redireciona para a página de login
+                alert("Você precisa estar logado para acessar essa página");
+                window.location.href = "./signin.html"; // Insira o caminho correto para a página de login
+            }
+
+            // Adiciona event listener para o botão 'saveButton'
+            document.getElementById('saveButton').addEventListener('click', salvarDadosLocalmente);
+        });
+    </script>
+</body>
+</html>

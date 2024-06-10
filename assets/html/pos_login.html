@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pós-Login</title>
+    <link rel="stylesheet" href="../css/pos_login.css">
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        .container button {
+            display: block;
+            margin: 10px auto;
+        }
+
+        #dadosUsuario {
+            margin-top: 20px;
+            display: none;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo, <span id="nomeUsuario">Nome do Usuário</span>!</h1>
+        <button id="cadastrarPetBtn">Cadastrar Novo Pet</button>
+        <button id="agendarServicoBtn">Agendar Serviço</button>
+        <button id="mostrarPetsBtn">Mostrar Meus Pets</button>
+        <button id="mostrarCadastroBtn">Mostrar Meu Cadastro</button>
+        <button id="mostraragendamentosBtn">Mostrar Serviços Agendados</button>
+        <div id="dadosUsuario">
+            <div id="agendamentos"></div>
+            <h2>Dados do Usuário</h2>
+            <p><strong>Nome:</strong> <span id="nome"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Endereço:</strong> <span id="endereco"></span></p>
+            <p><strong>Telefone:</strong> <span id="telefone"></span></p>
+        </div>
+    </div>
+
+    <script src="../js/pos_login.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body {
+    background-image: url("../images/pós_login.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%; /* Tamanho da imagem */
+    background-position: left top; /* Posicionamento da imagem no canto esquerdo superior */
+    background-attachment: fixed;
+}
+
+.container {
+    text-align: center;
+}
+
+.container button {
+    background-color: transparent;
+    border-color: #272262;
+    color: #272262;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 12pt;
+    margin: 10px auto; /* Alterado de margin: 10px auto; para centralizar verticalmente e horizontalmente */
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+    display: block;
+}
+
+.container button:hover {
+    background-color: #272262;
+    color: #fff;
+}
+
+
+
+/* Adicionando suporte ao Chrome e Chrome para Android */
+.element {
+    filter: alpha(opacity=50); /* IE 5-7 */
+    opacity: 0.5; /* Padrão */
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/agendamento.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <title>Agendamento de Serviços</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Agendamento de Serviços</h1>
+        <div id="welcomeMessage"></div>
+        <form id="servicoForm">
+            <label for="pet">Selecione o Pet:</label>
+            <select id="pet" name="pet" required></select>
+
+            <label for="tipoServico">Tipo de Serviço:</label>
+            <select id="tipoServico" name="tipoServico" required>
+                <option value="">Selecione o tipo de serviço</option>
+                <option value="Banho">Banho</option>
+                <option value="Banho com Tosa da Raça">Banho com Tosa da Raça</option>
+                <option value="Banho com Tosa Higiênica">Banho com Tosa Higiênica</option>
+            </select>
+
+            <label for="porte">Porte do Pet:</label>
+            <input type="text" id="porte" name="portePet" readonly>
+
+            <label for="profissional">Profissional:</label>
+            <select id="profissional" name="profissional" required>
+                <option value="João">João</option>
+                <option value="Isabela">Isabela</option>
+                <option value="Pedro">Pedro</option>
+            </select>
+
+            <label for="data">Data:</label>
+            <input type="text" id="data" name="data" required>
+
+            <label for="horario">Horário:</label>
+            <select id="horario" name="horario" required></select>
+
+            <label for="valorServico">Valor do Serviço:</label>
+            <input type="text" id="valorServico" name="valorServico" readonly>
+
+            <input type="button" id="novoAgendamento" value="Novo Agendamento">
+            <input type="button" id="finalizarAgendamento" value="Finalizar Agendamento">
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="../js/agendamento.js"></script>
+</body>
+</html>
