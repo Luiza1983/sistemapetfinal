@@ -61,6 +61,15 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error("Botão 'Mostrar Serviços Agendados' não encontrado. Certifique-se de que o ID 'mostraragendamentosBtn' está correto.");
     }
+    const logout = () => {
+        // Aqui você pode limpar os dados do usuário, tokens, etc.
+        // Redirecionar para a página de login
+        window.location.href = 'signin.html'; // Altere para o caminho correto da sua página de login
+    };
+    document.getElementById('logoutBtn').addEventListener('click', logout);
+    
+    // Outras lógicas de inicialização podem ser colocadas aqui
+
 });
 
 
@@ -163,5 +172,7 @@ alert("Você ainda não tem agendamento.");
 } else {
 alert("Você precisa estar logado para acessar seus agendamentos.");
 }
+
 }
+
 
